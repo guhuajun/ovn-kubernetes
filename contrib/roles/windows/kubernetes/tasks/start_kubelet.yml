@@ -14,7 +14,7 @@
       clusters:
       - name: local
         cluster:
-          server: http://{{ kubernetes_info.MASTER_IP }}:8080
+          server: https://{{ kubernetes_info.MASTER_IP }}:6443
       users:
       - name: kubelet
       contexts:

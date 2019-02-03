@@ -47,7 +47,7 @@
               Throw "Failed to set the OVS system-id guid"
           }
       }
-      ovs-vsctl.exe --timeout {{ ovs_cmd_timeout }} set Open_vSwitch . external_ids:k8s-api-server="http://{{ kubernetes_info.MASTER_IP }}:8080"
+      ovs-vsctl.exe --timeout {{ ovs_cmd_timeout }} set Open_vSwitch . external_ids:k8s-api-server="https://{{ kubernetes_info.MASTER_IP }}:6443"
       if($LASTEXITCODE) {
           Throw "Failed to set the k8s-api-server"
       }
