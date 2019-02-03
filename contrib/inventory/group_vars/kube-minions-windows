@@ -1,6 +1,8 @@
+# http://nokitel.im/index.php/2016/11/09/how-to-manage-windows-server-2016-with-ansible/
+
 # username and password of the nodes (if the nodes have different passwords, please look into host_vars folder)
 ansible_user: Administrator
-ansible_password: Passw0rd
+ansible_password: abcd@123
 # This is the default port for HTTPS used by winrm
 ansible_port: 5986
 ansible_connection: winrm
@@ -11,7 +13,8 @@ master: false
 minion: true
 controller: false
 
-docker_version: 18.03.1-ee-3
+# docker_version: 18.03.1-ee-3
+docker_version: 18.09.0
 # install_path: where kubernetes binaries and CNI plugin will be installed
 install_path: C:\kubernetes
 install_beta_ovs: true
